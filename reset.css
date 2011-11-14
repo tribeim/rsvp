@@ -60,17 +60,17 @@ a {
 
 /* change colours to suit your needs */
 ins {
-	background-color: #ff9;
+	/*background-color: #ff9;
 	color: #000;
-	text-decoration: none;
+	text-decoration: none;*/
 }
 
 /* change colours to suit your needs */
 mark {
-	background-color: #ff9;
+	/*background-color: #ff9;
 	color: #000;
 	font-style: italic;
-	font-weight: bold;
+	font-weight: bold;*/
 }
 
 del {
@@ -78,7 +78,7 @@ del {
 }
 
 abbr[title], dfn[title] {
-	border-bottom: 1px dotted;
+	/*border-bottom: 1px dotted;*/
 	cursor: help;
 }
 
@@ -89,12 +89,12 @@ table {
 
 /* change border colour to suit your needs */
 hr {
-	display: block;
+	/*display: block;
 	height: 1px;
 	border: 0;
 	border-top: 1px solid #cccccc;
 	margin: 1em 0;
-	padding: 0;
+	padding: 0;*/
 }
 
 input, select {

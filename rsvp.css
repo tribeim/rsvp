@@ -1,3 +1,130 @@
 /**
  RSVP for Tribe.im
  **/
+
+@import url(http://fonts.googleapis.com/css?family=Yellowtail|Pacifico|Special+Elite|Marvel:700);
+
+html {
+	min-height: 100%;
+	min-width: 100%;
+}
+
+body {
+	background-image: url(images/bg_wood.jpg);
+	background-position: center top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-origin: content-box;
+	background-clip: content-box;
+	min-height: 100%;
+	min-width: 100%;
+	text-align: center;
+}
+
+#main {
+	background: url(images/bg_paper.jpg) -8px -4px;
+	box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.25);
+	margin: 60px auto 0 auto;
+	text-align: left;
+	width: 960px;
+}
+
+#menu {
+	background: url(images/logo.png) left 5px no-repeat;
+	height: 70px;
+	position: absolute;
+	top: 0;
+	width: 960px;
+}
+	#menu > ul {
+		display: none;
+	}
+
+#introduction {
+	padding: 6em 3em;
+	text-align: center;
+}
+	#introduction > header > h1 {
+		margin: 0 0 1em 0;
+		color: #5e5e5e;
+		font-family: Yellowtail;
+		font-size: 3em;
+		font-weight: normal;
+		text-shadow:
+			0 0 2px rgba(255, 255, 255, 1),
+			2px 2px 6px rgba(0, 0, 0, 0.25);
+	}
+	#introduction > p {
+		color: #5e5e5e;
+		display: inline-block;
+		font-family: Yellowtail;
+		font-size: 1.5em;
+		line-height: 1.35em;
+		text-align: left;
+		text-shadow:
+			0 0 1px rgba(255, 255, 255, 1),
+			1px 1px 3px rgba(0, 0, 0, 0.25);
+	}
+
+#rsvp {
+	position: relative;
+}
+
+#envelope {
+	background: url(images/bg_envelope.jpg) left -1px no-repeat;
+	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.75);
+	height: 458px;
+	margin: 0 auto;
+	-webkit-transform: rotate(5deg);
+	transform: rotate(5deg);
+	width: 800px;
+}
+	#airmail {
+		bottom: 18px;
+		color: #974239;
+		left: 27px;
+		size: 1.5em;
+		font-family: "Special Elite";
+		position: absolute;
+		text-transform: uppercase;
+	}
+	#postage {
+		color: #974239;
+		font-family: "Marvel";
+		position: absolute;
+		text-transform: uppercase;
+		right: 32px;
+		top: 35px;
+		width: 95px;
+		text-align: center;
+		font-size: 1.15em;
+		line-height: 1.25em;
+	}
+	#to {
+		color: #2f2f5b;
+		font-size: 2em;
+		font-family: "Pacifico";
+		position: absolute;
+		top: 150px;
+		left: 220px;
+	}
+	#to:after {
+		content: ":";
+	}
+	#addressee {
+		color: #2f2f5b;
+		font-size: 3em;
+		font-family: "Pacifico";
+		position: absolute;
+		top: 200px;
+		left: 300px;
+	}
+
+#invitation {
+	display: none;
+}
+
+#confirmation {
+	display: none;
+}

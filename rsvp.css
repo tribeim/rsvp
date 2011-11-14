@@ -14,7 +14,7 @@ body {
 	background-position: center top;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	background-origin: content-box;
 	background-clip: content-box;
 	min-height: 100%;

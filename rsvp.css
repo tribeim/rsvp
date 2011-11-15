@@ -176,7 +176,9 @@ body {
 		border-color: #696969;
 		font-family: "Dancing Script";
 		font-size: 2em;
+		margin: 0;
 		outline: none;
+		padding: 0 0 4px 0;
 		text-align: center;
 		width: 100%;
 	}

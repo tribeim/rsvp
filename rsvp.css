@@ -86,6 +86,9 @@ body {
 	height: 458px;
 	margin: 0 auto;
 	position: relative;
+	-moz-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
 	-webkit-transform: rotate(5deg);
 	transform: rotate(5deg);
 	width: 800px;

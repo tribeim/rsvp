@@ -27,7 +27,8 @@ body {
 #main {
 	background: url(images/bg_paper.jpg) -8px -4px;
 	box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.25);
-	margin: 60px auto 0 auto;
+	margin: 60px auto 50px auto;
+	padding: 0 0 10px 0;
 	text-align: left;
 	width: 960px;
 }
@@ -71,7 +72,7 @@ body {
 			1px 1px 3px rgba(0, 0, 0, 0.25);
 	}
 	#introduction > p > dfn {
-		background-color: rgba(255, 255, 0, 0.12);
+		background-color: rgba(255, 255, 0, 0.22);
 		color: inherit;
 	}
 

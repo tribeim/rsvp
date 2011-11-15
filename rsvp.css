@@ -84,6 +84,7 @@ body {
 	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.75);
 	height: 458px;
 	margin: 0 auto;
+	position: relative;
 	-webkit-transform: rotate(5deg);
 	transform: rotate(5deg);
 	width: 800px;

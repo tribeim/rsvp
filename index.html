@@ -17,7 +17,7 @@
 					<li><a href="#artisans">Artisans</a></li>
 				</ul>
 			</nav>
-			<section id="introduction">
+			<article id="introduction">
 				<header>
 					<h1>Real-time, federated communications.</h1>
 				</header>
@@ -25,7 +25,7 @@
 				<p>It is <dfn title="GNU Public License version 3 or later (GPL3+)" class="free">free software</dfn>
 				based on <dfn title="eXtensible Messaging and Presence Protocol (XMPP)" class="open">open standards</dfn>
 				and is compatible with existing infrastructure.</p>
-			</section>
+			</article>
 			<section id="rsvp">
 				<div id="envelope">
 					<div id="airmail">Electronic mail</div>
@@ -35,19 +35,24 @@
 				</div>
 				<article id="invitation">
 					<form action="//www.mailchimp.com/">
+						<h2>Répondez s'il vous plaît</h2>
 						<p>RSVP and we'll let you know when the beta is ready.</p>
-						<div>
-							<label for="name"></label>
-							<input id="name" name="name" />
+						<div class="field">
+							<label for="name">Name</label>
+							<input id="name" name="name" type="text" placeholder="Name" />
 						</div>
-						<div>
-							<label for="email"></label>
-							<input id="email" name="email" type="email" />
+						<div class="field">
+							<label for="email">E-mail address</label>
+							<input id="email" name="email" type="email" placeholder="E-mail address" />
 						</div>
-						<input type="submit" value="Submit" />
+						<p>
+							<input type="submit" value="Submit" />
+						</p>
 					</form>
 				</article>
-				<article id="confirmation">
+			</section>
+			<section id="confirmation">
+				<article id="postcard">
 					<p>See you soon!</p>
 					<p>Love,<br />
 					<span class="name">The Tribe.im Team</span></p>

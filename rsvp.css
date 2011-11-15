@@ -2,7 +2,7 @@
  RSVP for Tribe.im
  **/
 
-@import url(http://fonts.googleapis.com/css?family=Yellowtail|Pacifico|Special+Elite|Marvel:700);
+@import url(http://fonts.googleapis.com/css?family=Yellowtail|Pacifico|Special+Elite|Marvel:700|Cookie|Josefin+Sans:600|Dancing+Script:700);
 
 ::selection { background: #DEBF78; color: #fff; text-shadow: none; }
 
@@ -135,8 +135,63 @@ body {
 	}
 
 #invitation {
-	display: none;
+	background:
+		url(images/card_motifs.png) center 12px no-repeat,
+		url(images/bg_card.jpg) center repeat;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.75);
+	height: 430px;
+	left: 90px;
+	position: absolute;
+	top: 10px;
+	width: 770px;
 }
+	#invitation > form {
+		text-align: center;
+	}
+	#invitation > form > h2 {
+		color: #404040;
+		font-family: Cookie;
+		font-size: 2.75em;
+		margin: 63px 0 0 0;
+		text-shadow: -1px 1px 1px rgba(255, 255, 255, 1);
+	}
+	#invitation > form > p {
+		color: #404040;
+		font-family: "Josefin Sans";
+		font-size: 1.5em;
+		margin: 40px 0 0 0;
+		text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+	}
+	#invitation > form > .field {
+		display: inline-block;
+		margin: 15px 0;
+		position: relative;
+		width: 400px;
+	}
+	#invitation > form > .field > input[type="text"],
+	#invitation > form > .field > input[type="email"] {
+		color: #303030;
+		background-color: transparent;
+		border-width: 0 0 1px 0;
+		border-color: #696969;
+		font-family: "Dancing Script";
+		font-size: 2em;
+		outline: none;
+		text-align: center;
+		width: 100%;
+	}
+	#invitation > form > .field > label {
+		color: #404040;
+		font-family: "Josefin Sans";
+		font-size: 1em;
+		left: 0;
+		position: absolute;
+		text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+		top: 45px;
+	}
+	#invitation > form > p > input[type="submit"] {
+		display: none;
+	}
 
 #confirmation {
 	display: none;

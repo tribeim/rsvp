@@ -24,7 +24,14 @@ body {
 	text-align: center;
 }
 
-#main {
+#content {
+	/*
+	background:
+		url(images/bg_crumpled_btm.jpg) left top no-repeat,
+		url(images/bg_crumpled_top.jpg) left bottom no-repeat,
+		url(images/bg_paper.jpg) -8px -4px repeat,
+		#f2f2f2;
+	*/
 	background: url(images/bg_paper.jpg) -8px -4px;
 	box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.25);
 	margin: 60px auto 50px auto;

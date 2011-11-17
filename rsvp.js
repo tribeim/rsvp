@@ -2,13 +2,13 @@
  RSVP for Tribe.im
  **/
 $(function () {
-	$("#rsvp")
-		.css({visibility: "hidden"});
 	$("#invitation")
+		.css({visibility: "hidden"});
+	$("#rsvp")
 		.css({visibility: "visible"})
 		.addClass("animated bounceIn");
 	setTimeout(function() {
-		$("#rsvp")
+		$("#invitation")
 			.css({visibility: "visible"})
 			.addClass("animated flipInX");
 	}, 800);

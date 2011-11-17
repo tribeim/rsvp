@@ -170,12 +170,17 @@ body {
 	}
 	#invitation > form > .field > input[type="text"],
 	#invitation > form > .field > input[type="email"] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: normal;
+		box-sizing: border-box;
 		color: #303030;
 		background-color: transparent;
 		border-width: 0 0 1px 0;
 		border-color: #696969;
 		font-family: "Dancing Script";
 		font-size: 2em;
+		height: 44px;
 		margin: 0;
 		outline: none;
 		padding: 0 0 4px 0;

@@ -78,6 +78,7 @@ body {
 
 #rsvp {
 	position: relative;
+	visibility: hidden;
 }
 
 #envelope {

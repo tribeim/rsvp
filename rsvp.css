@@ -173,6 +173,8 @@ body {
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: normal;
+		-webkit-border-radius: 0;
+		border-radius: 0;
 		box-sizing: border-box;
 		color: #303030;
 		background-color: transparent;

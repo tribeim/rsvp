@@ -225,6 +225,11 @@ body {
 		text-align: center;
 		width: 100%;
 	}
+	#rsvp > form > .field > input[type="text"]::-webkit-input-placeholder,
+	#rsvp > form > .field > input[type="email"]::-webkit-input-placeholder {
+		text-align: center;
+		color: #909090;
+	}
 	#rsvp > form > .field > label {
 		border-top: 1px solid white;
 		color: #404040;

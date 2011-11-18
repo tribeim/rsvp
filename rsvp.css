@@ -244,7 +244,22 @@ body {
 		width: 100%;
 	}
 	#rsvp > form > p > input[type="submit"] {
-		display: none;
+		background: url(images/ugly_button.png) no-repeat center;
+		border-style: none;
+		color: #ffffff;
+		cursor: pointer;
+		font-family: "Josefin Sans";
+		font-size: 0.8em;
+		height: 40px;
+		outline: none;
+		padding-bottom: 0.5em;
+		width: 207px;
+	}
+	#rsvp > form > p > input[type="submit"]:hover {
+		margin-top: -2px;
+	}
+	#rsvp > form > p > input[type="submit"]:active {
+		margin-top: 2px;
 	}
 
 #confirmation {

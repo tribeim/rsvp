@@ -33,22 +33,49 @@ body {
 		#f2f2f2;
 	*/
 	background: url(images/bg_paper.jpg) -8px -4px;
-	box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.25);
+	box-shadow: 3px 3px 8px 4px rgba(0, 0, 0, 0.25);
 	margin: 60px auto 50px auto;
 	padding: 0 0 10px 0;
+	position: relative;
 	text-align: left;
 	width: 960px;
 }
 
 #menu {
 	background: url(images/logo.png) left 5px no-repeat;
-	height: 70px;
+	height: 60px;
 	position: absolute;
-	top: 0;
+	top: -60px;
 	width: 960px;
 }
 	#menu > ul {
 		display: none;
+	}
+
+#content > footer {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#github {
+	background: no-repeat url(images/forkmeonce.png);
+	height: 158px;
+	display: inline-block;
+	position: relative;
+	right: -33px;
+	top: -3px;
+	width: 167px;
+	/* Malarkey Image Replacement */
+	letter-spacing: normal;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+	#github:hover {
+		top: -5px;
+	}
+	#github:active {
+		top: -1px;
 	}
 
 #introduction {

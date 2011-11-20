@@ -2,24 +2,27 @@
  RSVP for Tribe.im
  **/
 
+(function () {
+
+var showInvitation = function () {
+		$("#rsvp").css({visibility: "hidden"});
+		$("#invitation").css({visibility: "visible"}).addClass("animated bounceIn");
+		setTimeout(function () {
+			$("#rsvp").css({visibility: "visible"}).addClass("animated flipInX");
+		}, 800);
+	},
+	showPostcard = function () {
+		$("#subscriber").html(localStorage.getItem("rsvp_name"));
+		$("#address").html(localStorage.getItem("rsvp_email"));
+		$("#postcard").css({visibility: "visible"}).addClass("animated bounceIn show_front");
+		setTimeout(function () {
+			$("#postcard").toggleClass("show_front").toggleClass("show_back");
+		}, 1000);
+	};
+
 // Intro animation
 $(window).bind("load", function () {
-	var showInvitation = function () {
-			$("#rsvp").css({visibility: "hidden"});
-			$("#invitation").css({visibility: "visible"}).addClass("animated bounceIn");
-			setTimeout(function () {
-				$("#rsvp").css({visibility: "visible"}).addClass("animated flipInX");
-			}, 800);
-		},
-		showPostcard = function () {
-			$("#subscriber").html(localStorage.getItem("rsvp_name"));
-			$("#address").html(localStorage.getItem("rsvp_email"));
-			$("#postcard").css({visibility: "visible"}).addClass("animated bounceIn show_front");
-			setTimeout(function () {
-				$("#postcard").toggleClass("show_front").toggleClass("show_back");
-			}, 1000);
-		},
-		isRegistered = localStorage
+	var isRegistered = localStorage
 			&& localStorage.getItem("rsvp_name")
 			&& localStorage.getItem("rsvp_email");
 	setTimeout(isRegistered ? showPostcard : showInvitation, 400);
@@ -30,6 +33,7 @@ $(function () {
 	$("#rsvp > form").submit(function (event) {
 		event.preventDefault();
 		$("#rsvp").removeClass().addClass("animated flipOutX");
+		$("#sticky").css({visibility: "hidden"});
 		setTimeout(function () {
 			$("#rsvp").css({visibility: "hidden"});
 			$("#envelope").removeClass().addClass("sending");
@@ -69,9 +73,21 @@ $(function () {
 	});
 });
 
-// Postcard flipping
 $(function () {
+	// Postcard flipping
 	$("#postcard").bind("click", function () {
 		$("#postcard").toggleClass("show_front").toggleClass("show_back");
 	});
+	// Postcard flipping
+	$("#close").bind("click", function () {
+		localStorage.removeItem("rsvp_name");
+		localStorage.removeItem("rsvp_email");
+		$("#postcard").addClass("animated fadeOutDown");
+		showInvitation();
+		setTimeout(function () {
+			$("#postcard").css({visibility: "hidden"});
+		}, 400);
+	});
 });
+
+})();

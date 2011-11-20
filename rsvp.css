@@ -537,3 +537,20 @@ body {
 		text-decoration: none;
 		color: inherit;
 	}
+
+#close {
+	width: 40px;
+	height: 40px;
+	background: url(images/icon_close.png) center no-repeat;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: -20px;
+	left: 810px;
+	z-index: 40;
+	border-style: none;
+	/* Malarkey Image Replacement */
+	letter-spacing: normal;
+	text-indent: -9999px;
+	overflow: hidden;
+}

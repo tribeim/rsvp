@@ -4,6 +4,21 @@
 
 @import url(http://fonts.googleapis.com/css?family=Yellowtail|Pacifico|Special+Elite|Marvel:700|Cookie|Josefin+Sans:600|Dancing+Script:700);
 
+.animated.loop {
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+.animated.slow {
+	-webkit-animation-duration: 3s;
+	-moz-animation-duration: 3s;
+	-ms-animation-duration: 3s;
+	-o-animation-duration: 3s;
+	animation-duration: 3s;
+}
+
 ::selection { background: #DEBF78; color: #fff; text-shadow: none; }
 
 html {
@@ -12,7 +27,7 @@ html {
 }
 
 body {
-	background-image: url(images/bg_wood.jpg);
+	background-image: url(images/bg_woodburnt.jpg);
 	background-position: center top;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -35,6 +50,7 @@ body {
 	background: url(images/bg_paper.jpg) -8px -4px;
 	box-shadow: 3px 3px 8px 4px rgba(0, 0, 0, 0.25);
 	margin: 60px auto 50px auto;
+	min-height: 840px;
 	padding: 0 0 10px 0;
 	position: relative;
 	text-align: left;
@@ -105,14 +121,14 @@ body {
 			0 0 1px rgba(255, 255, 255, 1),
 			1px 1px 3px rgba(0, 0, 0, 0.25);
 	}
-	#introduction > p > dfn {
+	#introduction > p > i {
 		background-color: rgba(255, 255, 0, 0.22);
 		color: inherit;
 		font-style: normal;
 	}
 
 #invitation {
-	position: relative;
+	position: absolute;
 	visibility: hidden;
 }
 
@@ -120,7 +136,7 @@ body {
 	background: url(images/bg_envelope.jpg) left -1px no-repeat;
 	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.75);
 	height: 458px;
-	margin: 0 auto;
+	left: 80px;
 	position: relative;
 	-moz-transform: rotate(5deg);
 	-ms-transform: rotate(5deg);
@@ -129,6 +145,36 @@ body {
 	transform: rotate(5deg);
 	width: 800px;
 }
+	@-webkit-keyframes envelope-sending {
+		50% { -webkit-transform: rotate(2deg); }
+		0%, 100% { -webkit-transform: rotate(5deg); }
+	}
+	@-moz-keyframes envelope-sending {
+		50% { -moz-transform: rotate(2deg); }
+		0%, 100% { -moz-transform: rotate(5deg); }
+	}
+	@-o-keyframes envelope-sending {
+		50% { -o-transform: rotate(2deg); }
+		0%, 100% { -o-transform: rotate(5deg); }
+	}
+	@keyframes envelope-sending {
+		50% { transform: rotate(2deg); }
+		0%, 100% { transform: rotate(5deg); }
+	}
+	#envelope.sending {
+		-webkit-animation: envelope-sending 0.75s infinite ease;
+		-moz-animation-name: envelope-sending 0.75s infinite ease;
+		-ms-animation-name: envelope-sending 0.75s infinite ease;
+		-o-animation-name: envelope-sending 0.75s infinite ease;
+		animation-name: envelope-sending 0.75s infinite ease;
+	}
+	#envelope.success {
+		-webkit-animation: bounceOutRight 0.75s ease;
+		-moz-animation-name: bounceOutRight 0.75s ease;
+		-ms-animation-name: bounceOutRight 0.75s ease;
+		-o-animation-name: bounceOutRight 0.75s ease;
+		animation-name: bounceOutRight 0.75s ease;
+	}
 	#airmail {
 		bottom: 18px;
 		color: #974239;
@@ -174,7 +220,7 @@ body {
 	background:
 		url(images/card_motifs.png) center 12px no-repeat,
 		url(images/bg_card.jpg) center repeat;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.75);
+	box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.4);
 	height: 430px;
 	left: 90px;
 	position: absolute;
@@ -211,6 +257,7 @@ body {
 		appearance: normal;
 		-webkit-border-radius: 0;
 		border-radius: 0;
+		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 		color: #303030;
 		background-color: transparent;
@@ -262,6 +309,186 @@ body {
 		margin-top: 2px;
 	}
 
-#confirmation {
-	display: none;
+#sticky {
+	background: url(images/sticky.png) 0 -2px no-repeat rgba(0, 0, 0, 0.20);
+	box-shadow: 1px 5px 5px 0 rgba(0, 0, 0, 0.2);
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #404040;
+	font-family: "Josefin Sans";
+	font-size: 1em;
+	height: 160px;
+	overflow-y: auto;
+	padding: 1em;
+	position: absolute;
+	right: 10px;
+	top: 200px;
+	visibility: hidden;
+	width: 160px;
 }
+
+#postcard {
+	cursor: pointer;
+	position: absolute;
+	-webkit-perspective: 1200;
+	-moz-perspective: 1200;
+	perspective: 1200;
+	visibility: hidden;
+}
+#postcard #front,
+#postcard #back {
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+#postcard.show_front #front {
+	-webkit-transform: rotateY(0deg) rotate(2deg);
+	-moz-transform: rotateY(0deg) rotate(2deg);
+}
+#postcard.show_front #back {
+	-webkit-transform: rotateY(-180deg) rotate(-2deg);
+	-moz-transform: rotateY(-180deg) rotate(-2deg);
+}
+#postcard.show_back #front {
+	-webkit-transform: rotateY(180deg) rotate(2deg);
+	-moz-transform: rotateY(180deg) rotate(2deg);
+}
+#postcard.show_back #back {
+	-webkit-transform: rotateY(0deg) rotate(-2deg);
+	-moz-transform: rotateY(0deg) rotate(-2deg);
+}
+
+#front {
+	background:
+		-webkit-radial-gradient(
+			120% 105%,
+			cover,
+			transparent 50%,
+			rgba(255, 255, 255, 0.07) 69.5%,
+			transparent 70%,
+			transparent 100%
+		) no-repeat 0px 0px,
+		url(images/postcard_photo01.jpg) no-repeat white;
+	box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.4);
+	height: 400px;
+	left: 120px;
+	position: absolute;
+	/*
+	-moz-transform: rotate(1deg);
+	-ms-transform: rotate(1deg);
+	-o-transform: rotate(1deg);
+	-webkit-transform: rotate(1deg);
+	transform: rotate(1deg);
+	*/
+	width: 700px;
+}
+
+#slogan {
+	background: url(images/uniquelySG.png) no-repeat;
+	height: 42px;
+	display: inline-block;
+	position: absolute;
+	left: 26px;
+	bottom: 20px;
+	width: 109px;
+	/* Malarkey Image Replacement */
+	letter-spacing: normal;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+#back {
+	background: url(images/postcard_back.jpg) no-repeat white;
+	box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.4);
+	height: 400px;
+	left: 120px;
+	position: absolute;
+	/*
+	-moz-transform: rotate(1deg);
+	-ms-transform: rotate(1deg);
+	-o-transform: rotate(1deg);
+	-webkit-transform: rotate(1deg);
+	transform: rotate(1deg);
+	*/
+	width: 700px;
+}
+
+#greeting {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	padding: 1.5em 0 0 2.5em;
+	color: #5e5e5e;
+	font-family: Yellowtail;
+	font-size: 2em;
+	font-weight: normal;
+	-moz-transform: rotate(-2deg);
+	-ms-transform: rotate(-2deg);
+	-o-transform: rotate(-2deg);
+	-webkit-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+	#greeting p {
+		margin: 0.7em 0;
+	}
+
+#recipient {
+	position: absolute;
+	top: 180px;
+	right: 21px;
+	width: 201px;
+}
+
+#subscriber,
+#address {
+	color: #5e5e5e;
+	font-family: Yellowtail;
+	font-size: 2em;
+	font-weight: normal;
+	line-height: 40px;
+	margin-top: -4px;
+}
+
+#address {
+	color: blue;
+	word-break: break-all;
+}
+
+#stamp {
+	background:
+		url(images/postcard_stamp.png) 64px 48px no-repeat,
+		url(images/postage_photo01.jpg) 135px 23px no-repeat,
+		url(images/postage_stamp.png) 126px 12px no-repeat;
+	height: 180px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 250px;
+}
+
+#photographer {
+	color: #6d6962;
+	font-family: "Josefin Sans";
+	font-size: 0.8em;
+	text-transform: uppercase;
+	position: absolute;
+	left: -190px;
+	top: 190px;
+	width: 400px;
+	text-align: center;
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+	#photographer a {
+		text-decoration: none;
+		color: inherit;
+	}

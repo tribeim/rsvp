@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Tribe.im | Pre-launch Registration</title>
+		<title>Tribe.im | Real-Time, Federated Communications</title>
 		<link rel="stylesheet" href="reset.css" />
 		<link rel="stylesheet" href="animate.css" />
 		<link rel="stylesheet" href="rsvp.css" />
@@ -23,18 +23,18 @@
 					<h1>Real-time, federated communications</h1>
 				</header>
 				<p>We are crafting a beautiful service to help you collaborate and share information with your friends or colleagues.</p>
-				<p>It is <dfn title="GNU Public License version 3 or later" class="free">free software</dfn>
-				based on <dfn title="Extensible Messaging and Presence Protocol (XMPP)" class="open">open standards</dfn>
+				<p>It is <i title="GNU Public License version 3 or later" class="free">free software</i>
+				based on <i title="Extensible Messaging and Presence Protocol (XMPP)" class="open">open standards</i>
 				and is compatible with existing infrastructure.</p>
 			</article>
-			<section id="invitation">
-				<div id="envelope">
-					<div id="airmail">Electronic mail</div>
-					<div id="postage">No postage necessary if mailed on the Internet</div>
-					<div id="to">To</div>
-					<div id="addressee">Tribe.im</div>
-				</div>
-				<article id="rsvp">
+			<article id="invitation">
+				<figure id="envelope">
+					<figure id="airmail">Electronic mail</figure>
+					<figure id="postage">No postage necessary if mailed on the Internet</figure>
+					<label id="to">To</label>
+					<address id="addressee">Tribe.im</address>
+				</figure>
+				<div id="rsvp">
 					<form action="http://eepurl.com/hdo36">
 						<h2>Répondez s'il vous plaît</h2>
 						<p>RSVP and we'll let you know when the beta is ready.</p>
@@ -50,15 +50,28 @@
 							<input type="submit" value="Submit" />
 						</p>
 					</form>
-				</article>
-			</section>
-			<section id="confirmation">
-				<article id="postcard">
-					<p>See you soon!</p>
-					<p>Love,<br />
-					<span class="name">The Tribe.im Team</span></p>
-				</article>
-			</section>
+					<aside id="sticky"></aside>
+				</div>
+			</article>
+			<article id="postcard" class="show_front">
+				<figure id="front">
+					<figcaption id="slogan">Uniquely Singapore</figcaption>
+				</figure>
+				<div id="back">
+					<figure id="stamp"></figure>
+					<address id="recipient">
+						<p id="subscriber">Johnson Galterson</p>
+						<p id="address">john.galt@gmail.com</p>
+					</address>
+					<div id="greeting">
+						<p>Thank you for registering.</p>
+						<p>See you soon!</p>
+						<p>Love,<br />
+						<span class="name">The Tribe.im Team</span></p>
+					</div>
+					<aside id="photographer">Photograph by <a href="http://www.flickr.com/photos/dem_romero/">Dem Romero</a></aside>
+				</div>
+			</article>
 			<footer>
 				<a id="github" href="https://github.com/tribeim">Fork me on GitHub</a>
 			</footer>

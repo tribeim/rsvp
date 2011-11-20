@@ -1,0 +1,3 @@
+<?php
+$apikey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-XXX';
+$list_id = 'XXXXXXXXXX';

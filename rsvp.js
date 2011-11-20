@@ -54,7 +54,7 @@ $(function () {
 						setTimeout(function () {
 							$("#postcard").toggleClass("show_front").toggleClass("show_back");
 						}, 1000);
-					}, 500);
+					}, 400);
 				},
 				error: function (xhr, type) {
 					$("#envelope").removeClass();
@@ -62,10 +62,10 @@ $(function () {
 					$("#rsvp").css({visibility: "visible"}).removeClass().addClass("animated flipInX");
 					setTimeout(function () {
 						$("#sticky").css({visibility: "visible"}).addClass("animated rollIn");
-					}, 600);
+					}, 400);
 				}
 			});
-		}, 600);
+		}, 400);
 	});
 });
 

@@ -153,6 +153,10 @@ body {
 		50% { -moz-transform: rotate(2deg); }
 		0%, 100% { -moz-transform: rotate(5deg); }
 	}
+	@-ms-keyframes envelope-sending {
+		50% { -moz-transform: rotate(2deg); }
+		0%, 100% { -moz-transform: rotate(5deg); }
+	}
 	@-o-keyframes envelope-sending {
 		50% { -o-transform: rotate(2deg); }
 		0%, 100% { -o-transform: rotate(5deg); }
@@ -163,17 +167,17 @@ body {
 	}
 	#envelope.sending {
 		-webkit-animation: envelope-sending 0.75s infinite ease;
-		-moz-animation-name: envelope-sending 0.75s infinite ease;
-		-ms-animation-name: envelope-sending 0.75s infinite ease;
-		-o-animation-name: envelope-sending 0.75s infinite ease;
-		animation-name: envelope-sending 0.75s infinite ease;
+		-moz-animation: envelope-sending 0.75s infinite ease;
+		-ms-animation: envelope-sending 0.75s infinite ease;
+		-o-animation: envelope-sending 0.75s infinite ease;
+		animation: envelope-sending 0.75s infinite ease;
 	}
 	#envelope.success {
 		-webkit-animation: bounceOutRight 0.75s ease;
-		-moz-animation-name: bounceOutRight 0.75s ease;
-		-ms-animation-name: bounceOutRight 0.75s ease;
-		-o-animation-name: bounceOutRight 0.75s ease;
-		animation-name: bounceOutRight 0.75s ease;
+		-moz-animation: bounceOutRight 0.75s ease;
+		-ms-animation: bounceOutRight 0.75s ease;
+		-o-animation: bounceOutRight 0.75s ease;
+		animation: bounceOutRight 0.75s ease;
 	}
 	#airmail {
 		bottom: 18px;
@@ -299,7 +303,7 @@ body {
 		font-size: 0.8em;
 		height: 40px;
 		outline: none;
-		padding-bottom: 0.5em;
+		padding-bottom: 0.25em;
 		width: 207px;
 	}
 	#rsvp > form > p > input[type="submit"]:hover {
@@ -329,42 +333,98 @@ body {
 
 #postcard {
 	cursor: pointer;
-	position: absolute;
-	-webkit-perspective: 1200;
 	-moz-perspective: 1200;
+	-ms-perspective: 1200;
+	-o-perspective: 1200;
+	-webkit-perspective: 1200;
 	perspective: 1200;
+	position: absolute;
 	visibility: hidden;
 }
 #postcard #front,
 #postcard #back {
-	-webkit-transform-style: preserve-3d;
-	-webkit-backface-visibility: hidden;
 	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
 	-moz-backface-visibility: hidden;
-	-o-transition: all .4s ease-in-out;
-	-ms-transition: all .4s ease-in-out;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
 	-moz-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
 	-webkit-transition: all .4s ease-in-out;
 	transition: all .4s ease-in-out;
 }
 #postcard.show_front #front {
-	-webkit-transform: rotateY(0deg) rotate(2deg);
+	z-index: 20;
 	-moz-transform: rotateY(0deg) rotate(2deg);
+	-ms-transform: rotateY(0deg) rotate(2deg);
+	-o-transform: rotateY(0deg) rotate(2deg);
+	-webkit-transform: rotateY(0deg) rotate(2deg);
+	transform: rotateY(0deg) rotate(2deg);
 }
 #postcard.show_front #back {
-	-webkit-transform: rotateY(-180deg) rotate(-2deg);
+	z-index: 10;
 	-moz-transform: rotateY(-180deg) rotate(-2deg);
+	-ms-transform: rotateY(-180deg) rotate(-2deg);
+	-o-transform: rotateY(-180deg) rotate(-2deg);
+	-webkit-transform: rotateY(-180deg) rotate(-2deg);
+	transform: rotateY(-180deg) rotate(-2deg);
 }
 #postcard.show_back #front {
-	-webkit-transform: rotateY(180deg) rotate(2deg);
+	z-index: 20;
 	-moz-transform: rotateY(180deg) rotate(2deg);
+	-ms-transform: rotateY(180deg) rotate(2deg);
+	-o-transform: rotateY(180deg) rotate(2deg);
+	-webkit-transform: rotateY(180deg) rotate(2deg);
+	transform: rotateY(180deg) rotate(2deg);
 }
 #postcard.show_back #back {
-	-webkit-transform: rotateY(0deg) rotate(-2deg);
+	z-index: 30;
 	-moz-transform: rotateY(0deg) rotate(-2deg);
+	-ms-transform: rotateY(0deg) rotate(-2deg);
+	-o-transform: rotateY(0deg) rotate(-2deg);
+	-webkit-transform: rotateY(0deg) rotate(-2deg);
+	transform: rotateY(0deg) rotate(-2deg);
 }
 
 #front {
+	background:
+		-moz-radial-gradient(
+			120% 105%,
+			cover,
+			transparent 50%,
+			rgba(255, 255, 255, 0.07) 69.5%,
+			transparent 70%,
+			transparent 100%
+		) no-repeat 0px 0px,
+		url(images/postcard_photo01.jpg) no-repeat white;
+	background:
+		-ms-radial-gradient(
+			120% 105%,
+			cover,
+			transparent 50%,
+			rgba(255, 255, 255, 0.07) 69.5%,
+			transparent 70%,
+			transparent 100%
+		) no-repeat 0px 0px,
+		url(images/postcard_photo01.jpg) no-repeat white;
+	background:
+		-o-radial-gradient(
+			120% 105%,
+			cover,
+			transparent 50%,
+			rgba(255, 255, 255, 0.07) 69.5%,
+			transparent 70%,
+			transparent 100%
+		) no-repeat 0px 0px,
+		url(images/postcard_photo01.jpg) no-repeat white;
 	background:
 		-webkit-radial-gradient(
 			120% 105%,
@@ -379,13 +439,6 @@ body {
 	height: 400px;
 	left: 120px;
 	position: absolute;
-	/*
-	-moz-transform: rotate(1deg);
-	-ms-transform: rotate(1deg);
-	-o-transform: rotate(1deg);
-	-webkit-transform: rotate(1deg);
-	transform: rotate(1deg);
-	*/
 	width: 700px;
 }
 
@@ -409,13 +462,6 @@ body {
 	height: 400px;
 	left: 120px;
 	position: absolute;
-	/*
-	-moz-transform: rotate(1deg);
-	-ms-transform: rotate(1deg);
-	-o-transform: rotate(1deg);
-	-webkit-transform: rotate(1deg);
-	transform: rotate(1deg);
-	*/
 	width: 700px;
 }
 
@@ -440,9 +486,9 @@ body {
 
 #recipient {
 	position: absolute;
-	top: 180px;
-	right: 21px;
-	width: 201px;
+	top: 207px;
+	right: 20px;
+	width: 240px;
 }
 
 #subscriber,
@@ -452,7 +498,6 @@ body {
 	font-size: 2em;
 	font-weight: normal;
 	line-height: 40px;
-	margin-top: -4px;
 }
 
 #address {

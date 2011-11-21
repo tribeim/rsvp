@@ -2,7 +2,7 @@
  RSVP for Tribe.im
  **/
 
-@import url(http://fonts.googleapis.com/css?family=Yellowtail|Pacifico|Special+Elite|Marvel:700|Cookie|Josefin+Sans:600|Dancing+Script:700|Kreon:700|Yanone+Kaffeesatz:300);
+@import url(http://fonts.googleapis.com/css?family=Yellowtail|Pacifico|Special+Elite|Marvel:700|Cookie|Josefin+Sans:600|Dancing+Script:700|Kreon:300,700|Yanone+Kaffeesatz:300);
 
 .animated.loop {
 	-webkit-animation-iteration-count: infinite;
@@ -172,7 +172,7 @@ body {
 		color: #333;
 		font-family: Kreon;
 		font-size: 3em;
-		font-weight: normal;
+		font-weight: bold;
 		text-shadow:
 			0 0 2px rgba(255, 255, 255, 1),
 			1px 1px 2px rgba(0, 0, 0, 0.25)
@@ -295,34 +295,40 @@ body {
 		url(images/card_motifs.png) center 12px no-repeat,
 		url(images/bg_card.jpg) center repeat;
 	box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.4);
-	height: 430px;
-	left: 90px;
+	height: 400px;
+	left: 130px;
 	position: absolute;
-	top: 10px;
-	width: 770px;
+	top: 30px;
+	width: 700px;
 }
 	#rsvp > form {
 		text-align: center;
 	}
 	#rsvp > form > h2 {
-		color: #404040;
+		color: #a15637;
 		font-family: Cookie;
-		font-size: 2.75em;
-		margin: 63px 0 0 0;
-		text-shadow: -1px 1px 2px rgba(255, 255, 255, 0.75);
+		font-size: 3em;
+		margin: 20px 0 0 0;
+		text-shadow: 2px 1px 1px rgba(255, 255, 255, 0.75);
 	}
 	#rsvp > form > p {
 		color: #404040;
-		font-family: "Josefin Sans";
+		font-family: Kreon;
 		font-size: 1.5em;
-		margin: 40px 0 0 0;
+		margin: 50px 0 0 0;
 		text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+	}
+	#rsvp > form > p:last-of-type {
+		margin: 40px 0 0 0;
 	}
 	#rsvp > form > .field {
 		display: inline-block;
 		margin: 15px 0;
 		position: relative;
 		width: 400px;
+	}
+	#rsvp > form > .field:first-of-type {
+		margin: 20px 0 0 0;
 	}
 	#rsvp > form > .field > input[type="text"],
 	#rsvp > form > .field > input[type="email"] {
@@ -333,7 +339,7 @@ body {
 		border-radius: 0;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
-		color: #303030;
+		color: #4b483f;
 		background-color: transparent;
 		border-width: 0 0 1px 0;
 		border-color: #696969;
@@ -354,10 +360,10 @@ body {
 	#rsvp > form > .field > label {
 		border-top: 1px solid white;
 		color: #404040;
-		font-family: "Josefin Sans";
+		font-family: Kreon;
 		font-size: 1em;
 		left: 0;
-		padding-top: 2px;
+		padding-top: 1px;
 		position: absolute;
 		text-align: left;
 		text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
@@ -365,22 +371,29 @@ body {
 		width: 100%;
 	}
 	#rsvp > form > p > input[type="submit"] {
-		background: url(images/ugly_button.png) no-repeat center;
-		border-style: none;
-		color: #ffffff;
+		background: url(images/card_button.png) no-repeat center;
+		border: 0 none;
+		color: #a15637;
 		cursor: pointer;
-		font-family: "Josefin Sans";
-		font-size: 0.8em;
-		height: 40px;
+		font-family: Cookie;
+		font-size: 1.25em;
+		height: 41px;
+		margin: 0;
 		outline: none;
-		padding-bottom: 0.25em;
-		width: 207px;
+		padding: 5px 0;
+		text-shadow: 1px 2px 1px rgba(255, 255, 255, 0.75);
+		width: 155px;
+
+		-moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		-o-transition: all .1s ease-in-out;
+		-webkit-transition: all .1s ease-in-out;
+		transition: all .1s ease-in-out;
 	}
 	#rsvp > form > p > input[type="submit"]:hover {
-		margin-top: -2px;
 	}
 	#rsvp > form > p > input[type="submit"]:active {
-		margin-top: 2px;
+		padding: 7px 0;
 	}
 
 #sticky {
@@ -396,9 +409,9 @@ body {
 	overflow-y: auto;
 	padding: 1em;
 	position: absolute;
-	right: 10px;
+	right: -30px;
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
-	top: 200px;
+	top: 170px;
 	visibility: hidden;
 	width: 160px;
 }

@@ -65,8 +65,8 @@ $(function () {
 					$("#sticky").html(xhr.responseText).css({visibility: "hidden"}).removeClass();
 					$("#rsvp").css({visibility: "visible"}).removeClass().addClass("animated flipInX");
 					setTimeout(function () {
-						$("#sticky").css({visibility: "visible"}).addClass("animated rollIn");
-					}, 400);
+						$("#sticky").css({visibility: "visible"}).addClass("animated fast rollIn");
+					}, 200);
 				}
 			});
 		}, 400);

@@ -2,7 +2,7 @@
  RSVP for Tribe.im
  **/
 
-@import url(http://fonts.googleapis.com/css?family=Yellowtail|Pacifico|Special+Elite|Marvel:700|Cookie|Josefin+Sans:600|Dancing+Script:700|Kreon:300,700|Yanone+Kaffeesatz:300);
+@import url(http://fonts.googleapis.com/css?family=Yellowtail|Pacifico|Special+Elite|Marvel:700|Cookie|Josefin+Sans:600|Dancing+Script:700|Kreon:300,400,700|Yanone+Kaffeesatz:300,400,700);
 
 .animated.loop {
 	-webkit-animation-iteration-count: infinite;
@@ -85,7 +85,7 @@ body {
 		display: inline-block;
 		font-family: Kreon;
 		font-size: 1.2em;
-		font-weight: bold;
+		font-weight: 700;
 		margin: 0.8em 0.1em;
 		text-decoration: none;
 		text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
@@ -172,7 +172,7 @@ body {
 		color: #333;
 		font-family: Kreon;
 		font-size: 3em;
-		font-weight: bold;
+		font-weight: 700;
 		text-shadow:
 			0 0 2px rgba(255, 255, 255, 1),
 			1px 1px 2px rgba(0, 0, 0, 0.25)
@@ -182,6 +182,7 @@ body {
 		display: inline-block;
 		font-family: "Yanone Kaffeesatz";
 		font-size: 1.3em;
+		font-weight: 300;
 		line-height: 1.35em;
 		width: 75%;
 		margin: 0 0 0.5em 0;
@@ -194,7 +195,7 @@ body {
 		background-color: rgba(255, 255, 0, 0.4);
 		color: inherit;
 		font-style: normal;
-		font-weight: bold;
+		font-weight: 400;
 	}
 
 #invitation {
@@ -361,7 +362,8 @@ body {
 		border-top: 1px solid white;
 		color: #404040;
 		font-family: Kreon;
-		font-size: 1em;
+		font-size: 0.8em;
+		font-weight: 300;
 		left: 0;
 		padding-top: 1px;
 		position: absolute;
@@ -404,7 +406,7 @@ body {
 	color: #a80000;
 	font-family: "Yanone Kaffeesatz";
 	font-size: 1.1em;
-	font-weight: bold;
+	font-weight: 300;
 	height: 160px;
 	overflow-y: auto;
 	padding: 1em;

@@ -2,7 +2,7 @@
  RSVP for Tribe.im
  **/
 
-@import url(http://fonts.googleapis.com/css?family=Yellowtail|Pacifico|Special+Elite|Marvel:700|Cookie|Josefin+Sans:600|Dancing+Script:700);
+@import url(http://fonts.googleapis.com/css?family=Yellowtail|Pacifico|Special+Elite|Marvel:700|Cookie|Josefin+Sans:600|Dancing+Script:700|Kreon:700|Yanone+Kaffeesatz:300);
 
 .animated.loop {
 	-webkit-animation-iteration-count: infinite;
@@ -82,6 +82,13 @@ body {
 	right: -33px;
 	top: -3px;
 	width: 167px;
+
+	-moz-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+
 	/* Malarkey Image Replacement */
 	letter-spacing: normal;
 	text-indent: -9999px;
@@ -95,36 +102,37 @@ body {
 	}
 
 #introduction {
-	padding: 4em 0 5em 0;
+	padding: 3em 0 1em 0;
 	text-align: center;
 }
 	#introduction > header > h1 {
-		margin: 0 0 0.75em 0;
-		color: #5e5e5e;
-		font-family: Yellowtail;
+		margin: 0 0 0.5em 0;
+		color: #333;
+		font-family: Kreon;
 		font-size: 3em;
 		font-weight: normal;
 		text-shadow:
 			0 0 2px rgba(255, 255, 255, 1),
-			2px 2px 6px rgba(0, 0, 0, 0.25);
+			1px 1px 2px rgba(0, 0, 0, 0.25)
 	}
 	#introduction > p {
-		color: #5e5e5e;
+		color: #333;
 		display: inline-block;
-		font-family: Yellowtail;
-		font-size: 1.5em;
+		font-family: "Yanone Kaffeesatz";
+		font-size: 1.3em;
 		line-height: 1.35em;
-		max-width: 55%;
+		width: 75%;
 		margin: 0 0 0.5em 0;
 		text-align: left;
 		text-shadow:
 			0 0 1px rgba(255, 255, 255, 1),
-			1px 1px 3px rgba(0, 0, 0, 0.25);
+			1px 1px 2px rgba(0, 0, 0, 0.25);
 	}
 	#introduction > p > i {
 		background-color: rgba(255, 255, 0, 0.22);
 		color: inherit;
 		font-style: normal;
+		font-weight: bold;
 	}
 
 #invitation {
@@ -138,32 +146,32 @@ body {
 	height: 458px;
 	left: 80px;
 	position: relative;
-	-moz-transform: rotate(5deg);
-	-ms-transform: rotate(5deg);
-	-o-transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
-	transform: rotate(5deg);
+	-moz-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	transform: rotate(-3deg);
 	width: 800px;
 }
 	@-webkit-keyframes envelope-sending {
-		50% { -webkit-transform: rotate(2deg); }
-		0%, 100% { -webkit-transform: rotate(5deg); }
+		50% { -webkit-transform: rotate(1deg); }
+		0%, 100% { -webkit-transform: rotate(-3deg); }
 	}
 	@-moz-keyframes envelope-sending {
-		50% { -moz-transform: rotate(2deg); }
-		0%, 100% { -moz-transform: rotate(5deg); }
+		50% { -moz-transform: rotate(1deg); }
+		0%, 100% { -moz-transform: rotate(-3deg); }
 	}
 	@-ms-keyframes envelope-sending {
-		50% { -moz-transform: rotate(2deg); }
-		0%, 100% { -moz-transform: rotate(5deg); }
+		50% { -moz-transform: rotate(1deg); }
+		0%, 100% { -moz-transform: rotate(-3deg); }
 	}
 	@-o-keyframes envelope-sending {
-		50% { -o-transform: rotate(2deg); }
-		0%, 100% { -o-transform: rotate(5deg); }
+		50% { -o-transform: rotate(1deg); }
+		0%, 100% { -o-transform: rotate(-3deg); }
 	}
 	@keyframes envelope-sending {
-		50% { transform: rotate(2deg); }
-		0%, 100% { transform: rotate(5deg); }
+		50% { transform: rotate(1deg); }
+		0%, 100% { transform: rotate(-3deg); }
 	}
 	#envelope.sending {
 		-webkit-animation: envelope-sending 0.75s infinite ease;

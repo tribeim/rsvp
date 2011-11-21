@@ -610,7 +610,7 @@ body {
 	font-size: 0.8em;
 	text-transform: uppercase;
 	position: absolute;
-	left: -190px;
+	left: -187px;
 	top: 190px;
 	width: 400px;
 	text-align: center;
@@ -624,6 +624,9 @@ body {
 		text-decoration: none;
 		color: inherit;
 	}
+	#photographer:hover, #photographer a:hover {
+		color: #a15637;
+	}
 
 #close {
 	width: 40px;
@@ -632,8 +635,8 @@ body {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	top: -20px;
-	left: 810px;
+	top: -10px;
+	left: 805px;
 	z-index: 40;
 	border-style: none;
 	/* Malarkey Image Replacement */

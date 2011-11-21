@@ -65,14 +65,68 @@ body {
 }
 
 #menu {
-	background: url(images/logo.png) left 5px no-repeat;
 	height: 60px;
 	position: absolute;
 	top: -60px;
 	width: 960px;
 }
 	#menu > ul {
-		display: none;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 0 0 0 100px;
+		text-align: center;
+		width: 100%;
+	}
+	#menu > ul > li {
+		display: inline;
+	}
+	#menu > ul > li > a {
+		color: #57381e;
+		display: inline-block;
+		font-family: Kreon;
+		font-size: 1.3em;
+		font-weight: bold;
+		margin: 0.7em 0.1em;
+		text-decoration: none;
+		text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+		padding: 0.3em 0.8em;
+		vertical-align: top;
+
+		-moz-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		-o-transition: all .1s ease-in-out;
+		-webkit-transition: background-color .1s ease-in-out;
+		transition: all .1s ease-in-out;
+	}
+	#menu > ul > li > a:hover {
+		background-color: rgba(99, 48, 0, 0.6);
+		color: white;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	}
+	#menu > ul > li > a:active {
+		padding: 0.35em 0.8em 0.25em 0.8em;
+	}
+	#menu > ul > li:first-child {
+		height: 100%;
+		left: 0;
+		position: absolute;
+	}
+	#menu > ul > li:first-child {
+	}
+	#menu > ul > li:first-child > a {
+		background: url(images/logo.png) left center no-repeat;
+		background-size: contain;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		width: 110px;
+		/* Malarkey Image Replacement */
+		letter-spacing: normal;
+		text-indent: -9999px;
+		overflow: hidden;
+	}
+	#menu > ul > li:first-child:active {
+		top: 2px;
 	}
 
 #content > footer {

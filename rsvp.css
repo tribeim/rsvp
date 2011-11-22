@@ -2,7 +2,7 @@
  RSVP for Tribe.im
  **/
 
-@import url(http://fonts.googleapis.com/css?family=Yellowtail|Pacifico|Special+Elite|Marvel:700|Cookie|Josefin+Sans:600|Dancing+Script:700|Kreon:300,400,700|Yanone+Kaffeesatz:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Yellowtail|Special+Elite|Marvel:700|Cookie|Josefin+Sans:600|Kreon:300,400,700|Yanone+Kaffeesatz:300,400,700);
 
 .animated.loop {
 	-webkit-animation-iteration-count: infinite;
@@ -274,7 +274,7 @@ body {
 	#to {
 		color: #2f2f5b;
 		font-size: 2em;
-		font-family: "Pacifico";
+		font-family: Yellowtail;
 		position: absolute;
 		top: 150px;
 		left: 220px;
@@ -285,7 +285,7 @@ body {
 	#addressee {
 		color: #2f2f5b;
 		font-size: 3em;
-		font-family: "Pacifico";
+		font-family: Yellowtail;
 		position: absolute;
 		top: 200px;
 		left: 300px;
@@ -344,8 +344,8 @@ body {
 		background-color: transparent;
 		border-width: 0 0 1px 0;
 		border-color: #696969;
-		font-family: "Dancing Script";
-		font-size: 2em;
+		font-family: Cookie;
+		font-size: 2.2em;
 		height: 44px;
 		margin: 0;
 		outline: none;

@@ -134,7 +134,7 @@ $(function () {
 			twitch = setTimeout(jiggle, _random(5000, 20000));
 		},
 		twitch = setTimeout(jiggle, _random(3000, 6000));
-	$("#rsvp").bind("click", function () {
+	$("#rsvp > form").submit(function () {
 		clearTimeout(twitch);
 	});
 });

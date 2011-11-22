@@ -47,18 +47,18 @@ body {
 }
 
 #content {
-	/*
 	background:
-		url(images/bg_crumpled_btm.jpg) left top no-repeat,
-		url(images/bg_crumpled_top.jpg) left bottom no-repeat,
-		url(images/bg_paper.jpg) -8px -4px repeat,
-		#f2f2f2;
-	*/
-	background: url(images/bg_paper.jpg) -8px -4px;
-	box-shadow: 3px 3px 8px 4px rgba(0, 0, 0, 0.25);
+		url(images/bg_crumpled_top.jpg) left top no-repeat,
+		url(images/bg_crumpled_btm.jpg) left bottom no-repeat,
+		#e6e6e6;
+	background-clip: padding-box;
+	border-width: 10px 10px 22px 10px;
+	-moz-border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
+	-webkit-border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
+	-o-border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
+	border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
 	margin: 60px auto 50px auto;
-	min-height: 840px;
-	padding: 0 0 10px 0;
+	min-height: 800px;
 	position: relative;
 	text-align: left;
 	width: 960px;

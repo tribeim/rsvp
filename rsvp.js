@@ -98,6 +98,45 @@ $(function () {
 			$("#postcard").css({visibility: "hidden"});
 		}, 400);
 	});
+	// Envelope twitching
+	var angle = -3,
+		_random = function (min, max) {
+			var range = max - min;
+			return (Math.random() * range) + min;
+		},
+		_round = function (amount, decimals) {
+			var precision = Math.pow(10, decimals);
+			return Math.round(amount * precision) / precision;
+		},
+		jiggle = function () {
+			var min = -4, // lower range
+				max = 4, // upper range
+				atmost = 3, // max change per interval
+				atleast = 1, // min change per interval
+				random = _random(min, max),
+				delta = Math.abs(angle - random),
+				capped = delta <= atmost ? random
+					: random <= angle ? (angle - atmost)
+					: (angle + atmost),
+				floored = capped >= atleast ? capped
+					: capped <= angle ? (angle - atleast)
+					: (angle + atleast),
+				rounded = _round(floored, 2),
+				transform = "rotate(" + rounded + "deg)";
+			angle = rounded;
+			$("#envelope").css({
+				"-moz-transform": transform,
+				"-ms-transform": transform,
+				"-o-transform": transform,
+				"-webkit-transform": transform,
+				"transform": transform
+			});
+			twitch = setTimeout(jiggle, _random(5000, 20000));
+		},
+		twitch = setTimeout(jiggle, _random(3000, 6000));
+	$("#rsvp").bind("click", function () {
+		clearTimeout(twitch);
+	});
 });
 
 })();

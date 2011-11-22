@@ -26,7 +26,11 @@
 	animation-duration: .4s;
 }
 
-::selection { background: #DEBF78; color: #fff; text-shadow: none; }
+::selection {
+	background: #DEBF78;
+	color: #fff;
+	text-shadow: none;
+}
 
 html {
 	min-height: 100%;
@@ -209,12 +213,19 @@ body {
 	height: 458px;
 	left: 80px;
 	position: relative;
+	width: 800px;
+
 	-moz-transform: rotate(-3deg);
 	-ms-transform: rotate(-3deg);
 	-o-transform: rotate(-3deg);
 	-webkit-transform: rotate(-3deg);
 	transform: rotate(-3deg);
-	width: 800px;
+
+	-moz-transition: all .8s ease-in-out;
+	-ms-transition: all .8s ease-in-out;
+	-o-transition: all .8s ease-in-out;
+	-webkit-transition: all .8s ease-in-out;
+	transition: all .8s ease-in-out;
 }
 	@-webkit-keyframes envelope-sending {
 		50% { -webkit-transform: rotate(1deg); }

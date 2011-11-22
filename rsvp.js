@@ -74,11 +74,20 @@ $(function () {
 });
 
 $(function () {
+	// Sticky closing
+	$("#sticky").bind("click", function (event) {
+		if(event.target.tagName.toLowerCase() !== "a") {
+			$("#sticky").removeClass().addClass("animated fast fadeOutDown");
+			setTimeout(function () {
+				$("#sticky").css({visibility: "hidden"});
+			}, 400);
+		}
+	});
 	// Postcard flipping
 	$("#postcard").bind("click", function () {
 		$("#postcard").toggleClass("show_front").toggleClass("show_back");
 	});
-	// Postcard flipping
+	// Postcard closing
 	$("#close").bind("click", function () {
 		localStorage.removeItem("rsvp_name");
 		localStorage.removeItem("rsvp_email");

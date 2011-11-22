@@ -400,10 +400,11 @@ body {
 
 #sticky {
 	background: url(images/sticky.png) 0 -2px no-repeat rgba(0, 0, 0, 0.20);
-	box-shadow: 1px 5px 5px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 5px 2px 0 rgba(0, 0, 0, 0.2);
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	color: #a80000;
+	cursor: pointer;
 	font-family: "Yanone Kaffeesatz";
 	font-size: 1.1em;
 	font-weight: 300;
@@ -417,6 +418,13 @@ body {
 	visibility: hidden;
 	width: 160px;
 }
+	#sticky:hover {
+		-moz-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		transform: scale(1.05);
+	}
 
 #postcard {
 	cursor: pointer;

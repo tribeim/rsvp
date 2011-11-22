@@ -564,7 +564,7 @@ body {
 	position: absolute;
 	left: 10px;
 	top: 10px;
-	padding: 1.5em 0 0 2.5em;
+	padding: 1.5em 0 0 2em;
 	color: #5e5e5e;
 	font-family: Yellowtail;
 	font-size: 2em;
@@ -577,6 +577,7 @@ body {
 }
 	#greeting p {
 		margin: 0.7em 0;
+		width: 320px;
 	}
 
 #recipient {
@@ -637,6 +638,7 @@ body {
 	}
 
 #close {
+	cursor: pointer;
 	width: 40px;
 	height: 40px;
 	background: url(images/icon_close.png) center no-repeat;
@@ -647,8 +649,21 @@ body {
 	left: 805px;
 	z-index: 40;
 	border-style: none;
+
+	-moz-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	-webkit-transition: all .1s ease-in-out;
+	transition: all .1s ease-in-out;
+
 	/* Malarkey Image Replacement */
 	letter-spacing: normal;
 	text-indent: -9999px;
 	overflow: hidden;
 }
+	#close:hover {
+		top: -12px;
+	}
+	#close:activate {
+		top: -8px;
+	}

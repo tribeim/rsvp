@@ -5,7 +5,8 @@
 (function () {
 
 var showInvitation = function () {
-		$("#rsvp").css({visibility: "hidden"});
+		$("#envelope").removeClass().css({visibility: "visible"});
+		$("#rsvp").removeClass().css({visibility: "hidden"});
 		$("#invitation").css({visibility: "visible"}).addClass("animated bounceIn");
 		setTimeout(function () {
 			$("#rsvp").css({visibility: "visible"}).addClass("animated flipInX");

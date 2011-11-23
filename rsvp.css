@@ -208,7 +208,7 @@ body {
 }
 
 #envelope {
-	background: url(images/bg_envelope.jpg) left -1px no-repeat;
+	background: url(images/bg_envelope.jpg) left top no-repeat;
 	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.75);
 	height: 400px;
 	left: 120px;

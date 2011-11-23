@@ -210,10 +210,11 @@ body {
 #envelope {
 	background: url(images/bg_envelope.jpg) left -1px no-repeat;
 	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.75);
-	height: 458px;
-	left: 80px;
+	height: 400px;
+	left: 120px;
 	position: relative;
-	width: 800px;
+	top: 20px;
+	width: 700px;
 
 	-moz-transform: rotate(-3deg);
 	-ms-transform: rotate(-3deg);
@@ -275,8 +276,8 @@ body {
 		font-family: "Marvel";
 		position: absolute;
 		text-transform: uppercase;
-		right: 32px;
-		top: 35px;
+		right: 22px;
+		top: 25px;
 		width: 95px;
 		text-align: center;
 		font-size: 1.15em;
@@ -287,8 +288,8 @@ body {
 		font-size: 2em;
 		font-family: Yellowtail;
 		position: absolute;
-		top: 150px;
-		left: 220px;
+		top: 130px;
+		left: 200px;
 	}
 	#to:after {
 		content: ":";
@@ -298,8 +299,8 @@ body {
 		font-size: 3em;
 		font-family: Yellowtail;
 		position: absolute;
-		top: 200px;
-		left: 300px;
+		top: 170px;
+		left: 270px;
 	}
 
 #rsvp {
@@ -310,7 +311,7 @@ body {
 	height: 400px;
 	left: 130px;
 	position: absolute;
-	top: 30px;
+	top: 0;
 	width: 700px;
 }
 	#rsvp > form {

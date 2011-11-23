@@ -109,8 +109,8 @@ $(function () {
 			return Math.round(amount * precision) / precision;
 		},
 		jiggle = function () {
-			var min = -4, // lower range
-				max = 4, // upper range
+			var min = -6, // lower range
+				max = 6, // upper range
 				atmost = 3, // max change per interval
 				atleast = 1, // min change per interval
 				random = _random(min, max),

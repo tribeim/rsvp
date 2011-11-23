@@ -611,6 +611,9 @@ body {
 #address {
 	color: blue;
 	word-break: break-all;
+	/* Equivalent */
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 #stamp {

@@ -501,6 +501,7 @@ body {
 }
 
 #front {
+	background: url(images/postcard_photo01.jpg) no-repeat white;
 	background:
 		-moz-radial-gradient(
 			120% 105%,

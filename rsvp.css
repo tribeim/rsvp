@@ -674,7 +674,6 @@ body {
 }
 	#close:hover {
 		background: url(images/icon_close.png) -46px center no-repeat;
-		top: -12px;
 	}
 	#close:active {
 		background: url(images/icon_close.png) -46px center no-repeat;

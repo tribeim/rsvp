@@ -197,9 +197,16 @@ body {
 	}
 	#introduction > p > i {
 		background-color: rgba(255, 255, 0, 0.4);
+		background-clip: padding-box;
+		border-width: 0 10px 0 10px;
+		-moz-border-image: url(images/bg_marker.png) 0 10 0 10 round;
+		-webkit-border-image: url(images/bg_marker.png) 0 10 0 10 round;
+		-o-border-image: url(images/bg_marker.png) 0 10 0 10 round;
+		border-image: url(images/bg_marker.png) 0 10 0 10 round;
 		color: inherit;
 		font-style: normal;
 		font-weight: 400;
+		margin: 0 -10px;
 	}
 
 #invitation {

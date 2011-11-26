@@ -26,7 +26,7 @@ $(window).bind("load", function () {
 	var isRegistered = localStorage
 			&& localStorage.getItem("rsvp_name")
 			&& localStorage.getItem("rsvp_email");
-	setTimeout(isRegistered ? showPostcard : showInvitation, 400);
+	setTimeout((isRegistered ? showPostcard : showInvitation), 400);
 });
 
 // Newsletter sign up
@@ -48,17 +48,12 @@ $(function () {
 				success: function (body) {
 					var name = $("#rsvp > form input[name='name']").val(),
 						email = $("#rsvp > form input[name='email']").val();
-					$("#subscriber").html(name);
-					$("#address").html(email);
 					localStorage.setItem("rsvp_name", name);
 					localStorage.setItem("rsvp_email", email);
 					$("#envelope").removeClass().addClass("success");
 					setTimeout(function () {
 						$("#envelope").css({visibility: "hidden"});
-						$("#postcard").css({visibility: "visible"}).addClass("animated bounceIn show_front");
-						setTimeout(function () {
-							$("#postcard").toggleClass("show_front").toggleClass("show_back");
-						}, 1000);
+						showPostcard();
 					}, 400);
 				},
 				error: function (xhr, type) {

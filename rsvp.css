@@ -52,25 +52,6 @@ html {
 	padding: 0 0 50px 0;
 }
 
-#landing {
-	background:
-		url(images/bg_crumpled_top.jpg) left top no-repeat,
-		url(images/bg_crumpled_btm.jpg) left bottom no-repeat,
-		#e6e6e6;
-	background-clip: padding-box;
-	border-width: 10px 10px 22px 10px;
-	-moz-border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
-	-webkit-border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
-	-o-border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
-	border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
-	margin: 0 auto 20px auto;
-	min-height: 800px;
-	position: relative;
-	text-align: left;
-	top: 50px;
-	width: 960px;
-}
-
 #menu {
 	height: 60px;
 	position: absolute;
@@ -137,12 +118,6 @@ html {
 		top: 2px;
 	}
 
-#landing > footer {
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-
 #github {
 	background: no-repeat url(images/forkmeonce.png);
 	height: 158px;
@@ -170,24 +145,50 @@ html {
 		top: -1px;
 	}
 
-#introduction {
+#sheet {
+	background:
+		url(images/bg_crumpled_top.jpg) left top no-repeat,
+		url(images/bg_crumpled_btm.jpg) left bottom no-repeat,
+		#e6e6e6;
+	background-clip: padding-box;
+	border-width: 10px 10px 22px 10px;
+	-moz-border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
+	-webkit-border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
+	-o-border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
+	border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
+	margin: 0 auto 20px auto;
+	min-height: 800px;
+	padding: 0 0 2em 0;
+	position: relative;
+	text-align: left;
+	top: 50px;
+	width: 960px;
+}
+	#sheet > footer {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+article {
 	padding: 3em 0 1em 0;
 	text-align: center;
 }
-	#introduction > header > hgroup > h1 {
+	article > header > hgroup > h1 {
 		display: none;
 	}
-	#introduction > header > hgroup > h2 {
+	article > header > hgroup > h2 {
 		margin: 0 0 0.5em 0;
 		color: #333;
 		font-family: Kreon;
-		font-size: 3em;
+		font-size: 2em;
 		font-weight: 700;
 		text-shadow:
 			0 0 2px rgba(255, 255, 255, 1),
 			1px 1px 2px rgba(0, 0, 0, 0.25)
 	}
-	#introduction > p {
+	article > p,
+	article > ul {
 		color: #333;
 		display: inline-block;
 		font-family: "Yanone Kaffeesatz";
@@ -201,7 +202,7 @@ html {
 			0 0 1px rgba(255, 255, 255, 1),
 			1px 1px 2px rgba(0, 0, 0, 0.25);
 	}
-	#introduction > p > i {
+	article > p > i {
 		background-color: rgba(255, 255, 0, 0.4);
 		background-clip: padding-box;
 		border-width: 0 10px 0 10px;
@@ -214,6 +215,39 @@ html {
 		font-style: normal;
 		font-weight: 400;
 		margin: 0 -10px;
+	}
+	article ul {
+		list-style-type: none;
+	}
+	article li {
+	}
+	article h3 {
+		font-weight: bold;
+	}
+	article > ul {
+		-moz-column-gap: 0.5em;
+		-webkit-column-gap: 0.5em;
+		column-gap: 0.5em;
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+	article > ul > li {
+		display: inline-block;
+		width: 100%;
+		margin: 0.5em 0;
+	}
+
+#product {
+	margin-top: 400px;
+}
+
+#introduction {
+	padding: 3em 0 1em 0;
+	text-align: center;
+}
+	#introduction h2 {
+		font-size: 3em;
 	}
 
 #invitation {
@@ -647,6 +681,7 @@ html {
 	color: #6d6962;
 	font-family: "Josefin Sans";
 	font-size: 0.8em;
+	font-style: normal;
 	text-transform: uppercase;
 	position: absolute;
 	left: -187px;

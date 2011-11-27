@@ -12,7 +12,8 @@
 	</head>
 	<body itemscope itemtype="http://schema.org/CreativeWork">
 		<div id="desk">
-			<section id="landing">
+			<section id="sheet">
+
 				<nav id="menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
 					<ul>
 						<li><a href="." rel="home">Home</a></li>
@@ -21,6 +22,7 @@
 						<li><a href="#artisans">Artisans</a></li>
 					</ul>
 				</nav>
+
 				<article id="introduction">
 					<header>
 						<hgroup>
@@ -34,7 +36,8 @@
 					based on <i title="Extensible Messaging and Presence Protocol (XMPP)">open standards</i>,
 					and is compatible with existing infrastructure.</p>
 				</article>
-				<article id="invitation">
+
+				<aside id="invitation">
 					<figure id="envelope">
 						<figure id="airmail">Electronic mail</figure>
 						<figure id="postage">No postage necessary if mailed on the Internet</figure>
@@ -57,10 +60,11 @@
 								<input type="submit" value="Submit" />
 							</p>
 						</form>
-						<aside id="sticky"></aside>
+						<figure id="sticky"></figure>
 					</div>
-				</article>
-				<article id="postcard" class="show_front">
+				</aside>
+
+				<aside id="postcard" class="show_front">
 					<button id="close">Close</button>
 					<figure id="front">
 						<figcaption id="slogan">Uniquely Singapore</figcaption>
@@ -77,62 +81,73 @@
 							<p>Love,<br />
 							<span class="name">The Tribe.im Team</span></p>
 						</div>
-						<aside id="photographer">Photograph by <a href="http://www.flickr.com/photos/dem_romero/">Dem Romero</a></aside>
+						<cite id="photographer">Photograph by <a href="http://www.flickr.com/photos/dem_romero/" target="_blank">Dem Romero</a></cite>
 					</div>
+				</aside>
+
+				<article id="product" itemprop="about">
+					<header>
+						<hgroup>
+							<h1>The Product</h1>
+							<h2>Hand made from the finest bits</h2>
+						</hgroup>
+					</header>
+					<p>Tribe.im is a real-time communications service for teams. It is currently under development. The roadmap includes many awesome features.</p>
+					<ul>
+						<li>
+							<h3>Messaging</h3>
+							<ul>
+								<li>One-on-one instant messaging</li>
+								<li>Conference chat rooms</li>
+								<li>Rich content: videos, maps, documents, etc.</li>
+							</ul>
+						</li>
+						<li>
+							<h3>Contact Management</h3>
+							<ul>
+								<li>Search and tag based filters</li>
+								<li>Shared groups</li>
+							</ul>
+						</li>
+						<li>
+							<h3>Profiles</h3>
+							<ul>
+								<li>Business card</li>
+								<li>Public/private information</li>
+								<li>Integrates with LinkedIn, Twitter, Gravatar, etc.</li>
+							</ul>
+						</li>
+						<li>
+							<h3>Pubsub Streams</h3>
+							<ul>
+								<li>Subscribe to data feeds to receive real-time instant notifications</li>
+								<li>Connects to RSS, email, CRM, ERP, etc.</li>
+							</ul>
+						</li>
+						<li>
+							<h3>File Sharing</h3>
+							<ul>
+								<li>Collaborate using team-based file repositories</li>
+								<li>Integrates with Dropbox (AWS S3)</li>
+							</ul>
+						</li>
+						<li>
+							<h3>Voice and Video</h3>
+							<ul>
+								<li>Live VOIP calls and video streams</li>
+								<li>Peer to peer for low latency, high quality</li>
+								<li>Bridge to regular telephone networks</li>
+							</ul>
+						</li>
+					</ul>
 				</article>
+
 				<footer>
 					<a id="github" href="https://github.com/tribeim">Fork me on GitHub</a>
 				</footer>
+
 			</section>
 		</div>
-
-		<article id="product" itemprop="about" hidden>
-			<hgroup>
-				<h1>The Product</h1>
-				<h2>Hand crafted from the finest bits</h2>
-			</hgroup>
-			<p>Tribe.im is a real-time communications service for teams. It is currently under development. The roadmap includes many awesome features.</p>
-			<ul>
-				<li>
-					<h3>Messaging</h3>
-					<ul>
-						<li>One-on-one instant messaging</li>
-						<li>Conference chat rooms</li>
-						<li>Federated to other XMPP services and transports</li>
-					</ul>
-				</li>
-				<li>
-					<h3>Profiles</h3>
-					<ul>
-						<li>Business card</li>
-						<li>Public/private information</li>
-						<li>Integrates with LinkedIn, Twitter, Gravatar, etc.</li>
-					</ul>
-				</li>
-				<li>
-					<h3>Pubsub Streams</h3>
-					<ul>
-						<li>Subscribe to data feeds to receive real-time instant notifications</li>
-						<li>Connects to RSS, email, CRM, ERP, etc.</li>
-					</ul>
-				</li>
-				<li>
-					<h3>File Sharing</h3>
-					<ul>
-						<li>Collaborate using team-based file repositories</li>
-						<li>Integrates with Dropbox (AWS S3)</li>
-					</ul>
-				</li>
-				<li>
-					<h3>Voice and Video</h3>
-					<ul>
-						<li>Live VOIP calls and video streams</li>
-						<li>Peer to peer for low latency, high quality</li>
-						<li>Bridge to regular telephone networks</li>
-					</ul>
-				</li>
-			</ul>
-		</article>
 
 		<article id="technology" itemprop="about" hidden>
 			<header>

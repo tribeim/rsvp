@@ -32,25 +32,27 @@
 	text-shadow: none;
 }
 
+[hidden] {
+	display: none;
+}
+
 html {
 	min-height: 100%;
 	min-width: 100%;
 }
 
-body {
+#desk {
 	background-image: url(images/bg_woodburnt.jpg);
 	background-position: center top;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
-	background-origin: content-box;
-	background-clip: content-box;
-	min-height: 100%;
-	min-width: 100%;
-	text-align: center;
+	background-origin: padding;
+	background-clip: padding-box;
+	padding: 0 0 50px 0;
 }
 
-#content {
+#landing {
 	background:
 		url(images/bg_crumpled_top.jpg) left top no-repeat,
 		url(images/bg_crumpled_btm.jpg) left bottom no-repeat,
@@ -61,10 +63,11 @@ body {
 	-webkit-border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
 	-o-border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
 	border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
-	margin: 50px auto 20px auto;
+	margin: 0 auto 20px auto;
 	min-height: 800px;
 	position: relative;
 	text-align: left;
+	top: 50px;
 	width: 960px;
 }
 
@@ -134,7 +137,7 @@ body {
 		top: 2px;
 	}
 
-#content > footer {
+#landing > footer {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -171,7 +174,10 @@ body {
 	padding: 3em 0 1em 0;
 	text-align: center;
 }
-	#introduction > header > h1 {
+	#introduction > header > hgroup > h1 {
+		display: none;
+	}
+	#introduction > header > hgroup > h2 {
 		margin: 0 0 0.5em 0;
 		color: #333;
 		font-family: Kreon;
@@ -203,6 +209,7 @@ body {
 		-webkit-border-image: url(images/bg_marker.png) 0 10 0 10 round;
 		-o-border-image: url(images/bg_marker.png) 0 10 0 10 round;
 		border-image: url(images/bg_marker.png) 0 10 0 10 round;
+		box-decoration-break: clone;
 		color: inherit;
 		font-style: normal;
 		font-weight: 400;

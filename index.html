@@ -10,75 +10,176 @@
 		<link rel="stylesheet" href="animate.css" />
 		<link rel="stylesheet" href="rsvp.css" />
 	</head>
-	<body>
-		<div id="content">
-			<nav id="menu">
-				<ul>
-					<li><a href="." rel="home">Home</a></li>
-					<li><a href="#philosophy">Philosophy</a></li>
-					<li><a href="#technology">Technology</a></li>
-					<li><a href="#artisans">Artisans</a></li>
-				</ul>
-			</nav>
-			<article id="introduction">
-				<header>
-					<h1>Real-time, federated communications</h1>
-				</header>
-				<p>We are crafting a beautiful service to help you collaborate and share information with your friends or colleagues.</p>
-				<p>It is <i title="GNU Public License version 3 or later" class="free">free software</i>
-				based on <i title="Extensible Messaging and Presence Protocol (XMPP)" class="open">open standards</i>
-				and is compatible with existing infrastructure.</p>
-			</article>
-			<article id="invitation">
-				<figure id="envelope">
-					<figure id="airmail">Electronic mail</figure>
-					<figure id="postage">No postage necessary if mailed on the Internet</figure>
-					<label id="to">To</label>
-					<address id="addressee">Tribe.im</address>
-				</figure>
-				<div id="rsvp">
-					<form action="http://eepurl.com/hdo36">
-						<h2>Répondez s'il vous plaît</h2>
-						<p>RSVP and we will let you know when the beta is ready.</p>
-						<div class="field">
-							<label for="name">Name</label>
-							<input id="name" name="name" type="text" placeholder="Name" autocomplete="off" />
-						</div>
-						<div class="field">
-							<label for="email">E-mail address</label>
-							<input id="email" name="email" type="email" placeholder="E-mail address" autocomplete="off" />
-						</div>
-						<p>
-							<input type="submit" value="Submit" />
-						</p>
-					</form>
-					<aside id="sticky"></aside>
-				</div>
-			</article>
-			<article id="postcard" class="show_front">
-				<button id="close">Close</button>
-				<figure id="front">
-					<figcaption id="slogan">Uniquely Singapore</figcaption>
-				</figure>
-				<div id="back">
-					<figure id="stamp"></figure>
-					<address id="recipient">
-						<p id="subscriber">Johnson Galterson</p>
-						<p id="address">john.galt@gmail.com</p>
-					</address>
-					<div id="greeting">
-						<p>Thank you for registering. Check your inbox to confirm.</p>
-						<p>See you soon!</p>
-						<p>Love,<br />
-						<span class="name">The Tribe.im Team</span></p>
+	<body itemscope itemtype="http://schema.org/CreativeWork">
+		<div id="desk">
+			<section id="landing">
+				<nav id="menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<ul>
+						<li><a href="." rel="home">Home</a></li>
+						<li><a href="#product">Product</a></li>
+						<li><a href="#technology">Technology</a></li>
+						<li><a href="#artisans">Artisans</a></li>
+					</ul>
+				</nav>
+				<article id="introduction">
+					<header>
+						<hgroup>
+							<h1 itemprop="name">Tribe.im</h1>
+							<h2>Real-time, federated communications</h2>
+						</hgroup>
+					</header>
+					<p itemprop="description">Tribe.im is a beautifully crafted service to help teams communicate and share information.
+					It is <i>a client for the real-time web</i>, making the latest collaboration technology easy to use.</p>
+					<p itemprop="description">It is <i title="GNU Public License version 3 or later">free software</i>
+					based on <i title="Extensible Messaging and Presence Protocol (XMPP)">open standards</i>
+					and is compatible with existing infrastructure.</p>
+				</article>
+				<article id="invitation">
+					<figure id="envelope">
+						<figure id="airmail">Electronic mail</figure>
+						<figure id="postage">No postage necessary if mailed on the Internet</figure>
+						<label id="to">To</label>
+						<address id="addressee">Tribe.im</address>
+					</figure>
+					<div id="rsvp">
+						<form action="http://eepurl.com/hdo36">
+							<h2>Répondez s'il vous plaît</h2>
+							<p>Subscribe to our newsletter for the latest announcements.</p>
+							<div class="field">
+								<label for="name">Name</label>
+								<input id="name" name="name" type="text" placeholder="Name" autocomplete="off" />
+							</div>
+							<div class="field">
+								<label for="email">E-mail address</label>
+								<input id="email" name="email" type="email" placeholder="E-mail address" autocomplete="off" />
+							</div>
+							<p>
+								<input type="submit" value="Submit" />
+							</p>
+						</form>
+						<aside id="sticky"></aside>
 					</div>
-					<aside id="photographer">Photograph by <a href="http://www.flickr.com/photos/dem_romero/">Dem Romero</a></aside>
-				</div>
-			</article>
-			<footer>
-				<a id="github" href="https://github.com/tribeim">Fork me on GitHub</a>
-			</footer>
+				</article>
+				<article id="postcard" class="show_front">
+					<button id="close">Close</button>
+					<figure id="front">
+						<figcaption id="slogan">Uniquely Singapore</figcaption>
+					</figure>
+					<div id="back">
+						<figure id="stamp"></figure>
+						<address id="recipient">
+							<p id="subscriber">John Galt</p>
+							<p id="address">john.galt@example.com</p>
+						</address>
+						<div id="greeting">
+							<p>Thank you for registering. Check your inbox to confirm.</p>
+							<p>See you soon!</p>
+							<p>Love,<br />
+							<span class="name">The Tribe.im Team</span></p>
+						</div>
+						<aside id="photographer">Photograph by <a href="http://www.flickr.com/photos/dem_romero/">Dem Romero</a></aside>
+					</div>
+				</article>
+				<footer>
+					<a id="github" href="https://github.com/tribeim">Fork me on GitHub</a>
+				</footer>
+			</section>
 		</div>
+
+		<article id="product" itemprop="about" hidden>
+			<hgroup>
+				<h1>The Product</h1>
+				<h2>Hand crafted from the finest bits</h2>
+			</hgroup>
+			<p>Tribe.im is a real-time communications service for teams. It is currently under development. The roadmap includes many awesome features.</p>
+			<ul>
+				<li>
+					<h3>Messaging</h3>
+					<ul>
+						<li>One-on-one instant messaging</li>
+						<li>Conference chat rooms</li>
+						<li>Federated to other XMPP services and transports</li>
+					</ul>
+				</li>
+				<li>
+					<h3>Profiles</h3>
+					<ul>
+						<li>Business card</li>
+						<li>Public/private information</li>
+						<li>Integrates with LinkedIn, Twitter, Gravatar, etc.</li>
+					</ul>
+				</li>
+				<li>
+					<h3>Pubsub Streams</h3>
+					<ul>
+						<li>Subscribe to data feeds to receive real-time instant notifications</li>
+						<li>Connects to RSS, email, CRM, ERP, etc.</li>
+					</ul>
+				</li>
+				<li>
+					<h3>File Sharing</h3>
+					<ul>
+						<li>Collaborate using team-based file repositories</li>
+						<li>Integrates with Dropbox (AWS S3)</li>
+					</ul>
+				</li>
+				<li>
+					<h3>Voice and Video</h3>
+					<ul>
+						<li>Live VOIP calls and video streams</li>
+						<li>Peer to peer for low latency, high quality</li>
+						<li>Bridge to regular telephone networks</li>
+					</ul>
+				</li>
+			</ul>
+		</article>
+
+		<article id="technology" itemprop="about" hidden>
+			<header>
+				<hgroup>
+					<h1>The Technology</h1>
+					<h2>Sufficiently advanced magic</h2>
+				</hgroup>
+			</header>
+			<p>Tribe.im uses open standards such as XMPP for its backend infrastructure.
+			Since there are many high quality XMPP servers available as free software,
+			this allows Tribe.im to focus on a high quality user experience.</p>
+
+			<p>The frontend of Tribe.im is a pure Javascript application
+			built using the latest and greatest technologies available via HTML5 and CSS3.
+			Tribe.im takes the long term view of standards compliance
+			over cross platform compatibility.</p>
+
+			<p>Creation of Tribe.im takes place on GitHub and Dropbox.
+			To join the effort, take up an Issue and send a Pull Request when you’re done.</p>
+		</article>
+
+		<article id="artisans" hidden>
+			<header>
+				<hgroup>
+					<h1>The Artisans</h1>
+					<h2>Smart and sexy people</h2>
+				</hgroup>
+			</header>
+			<ul>
+				<li itemprop="creator" itemscope itemtype="http://schema.org/Person">
+					<h3 itemprop="name">Sebastiaan Deckers</h3>
+					<p>
+						<a href="mailto:sebdeckers83@gmail.com" itemprop="email">Email me</a> or
+						<a href="http://twitter.com/sebdeckers" itemprop="url">follow me on Twitter</a>.
+					</p>
+					<p itemprop="jobTitle">Co-founder, frontend architect, XMPP hacker</p>
+				</li>
+				<li itemprop="creator" itemscope itemtype="http://schema.org/Person">
+					<h3 itemprop="name">Veronica Ng</h3>
+					<p>
+						<a href="mailto:hello@v.eroni.ca" itemprop="email">Email me</a> or
+						<a href="http://twitter.com/veronism" itemprop="url">follow me on Twitter</a>.
+					</p>
+					<p itemprop="jobTitle">Co-founder, UX designer, graphics artist</p>
+				</li>
+			</ul>
+		</article>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="jquery.js"><\/script>')</script>

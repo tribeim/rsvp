@@ -49,7 +49,7 @@ html {
 	background-attachment: scroll;
 	background-origin: padding;
 	background-clip: padding-box;
-	padding: 0 0 50px 0;
+	margin: 0 0 -200px 0;
 }
 
 #menu {
@@ -158,11 +158,12 @@ html {
 	border-image: url(images/bg_crumpled_frame.png) 10 10 22 10 stretch;
 	margin: 0 auto 20px auto;
 	min-height: 800px;
-	padding: 0 0 2em 0;
+	padding: 0 0 4em 0;
 	position: relative;
 	text-align: left;
 	top: 50px;
 	width: 960px;
+	z-index: 10;
 }
 	#sheet > footer {
 		position: absolute;
@@ -732,4 +733,41 @@ article {
 	#close:active {
 		background: url(images/icon_close.png) -46px center no-repeat;
 		top: -8px;
+	}
+
+#cloth {
+	background: url(images/bg_cloth.png) center center;
+	background-clip: padding-box;
+	border-width: 61px 0 0 0;
+	-moz-border-image: url(images/bg_cloth_ribbon.png) 61 0 0 0 repeat;
+	-webkit-border-image: url(images/bg_cloth_ribbon.png) 61 0 0 0 repeat;
+	-o-border-image: url(images/bg_cloth_ribbon.png) 61 0 0 0 repeat;
+	border-image: url(images/bg_cloth_ribbon.png) 61 0 0 0 repeat;
+	padding: 180px 0 250px 0;
+}
+	#cloth > article {
+		margin: 0 auto;
+		width: 960px;
+	}
+
+#technology {
+}
+	#technology::before {
+		box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.3);
+		content: " ";
+		width: 960px;
+		height: 450px;
+		background: url(images/bg_blueprint.png) center center;
+		position: relative;
+		display: block;
+		-moz-transform: rotate(-1.5deg);
+		-ms-transform: rotate(-1.5deg);
+		-o-transform: rotate(-1.5deg);
+		-webkit-transform: rotate(-1.5deg);
+		transform: rotate(-1.5deg);
+		margin: 0 0 -380px 0;
+	}
+	#technology > * {
+		z-index: 10;
+		position: relative;
 	}

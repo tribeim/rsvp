@@ -225,7 +225,11 @@ article {
 	article h3 {
 		font-weight: bold;
 	}
-	article > ul {
+
+#product {
+	margin-top: 400px;
+}
+	#product > ul {
 		-moz-column-gap: 0.5em;
 		-webkit-column-gap: 0.5em;
 		column-gap: 0.5em;
@@ -233,15 +237,11 @@ article {
 		-webkit-column-count: 2;
 		column-count: 2;
 	}
-	article > ul > li {
+	#product > ul > li {
 		display: inline-block;
 		width: 100%;
 		margin: 0.5em 0;
 	}
-
-#product {
-	margin-top: 400px;
-}
 
 #introduction {
 	padding: 3em 0 1em 0;
@@ -743,7 +743,7 @@ article {
 	-webkit-border-image: url(images/bg_cloth_ribbon.png) 61 0 0 0 repeat;
 	-o-border-image: url(images/bg_cloth_ribbon.png) 61 0 0 0 repeat;
 	border-image: url(images/bg_cloth_ribbon.png) 61 0 0 0 repeat;
-	padding: 180px 0 250px 0;
+	padding: 180px 0 200px 0;
 }
 	#cloth > article {
 		margin: 0 auto;
@@ -756,7 +756,7 @@ article {
 		box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.3);
 		content: " ";
 		width: 960px;
-		height: 450px;
+		height: 850px;
 		background: url(images/bg_blueprint.png) center center;
 		position: relative;
 		display: block;
@@ -765,9 +765,254 @@ article {
 		-o-transform: rotate(-1.5deg);
 		-webkit-transform: rotate(-1.5deg);
 		transform: rotate(-1.5deg);
-		margin: 0 0 -380px 0;
+		margin: 0 0 -780px 0;
 	}
 	#technology > * {
 		z-index: 10;
 		position: relative;
 	}
+
+#people {
+	z-index: 10;
+	position: relative;
+}
+	#people > ul {
+		width: 100%;
+		text-align: center;
+	}
+	#people [itemprop="creator"] {
+		background: url(images/rolodex.png) left top no-repeat;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		color: #555555;
+		display: inline-block;
+		height: 263px;
+		padding: 40px 10px 0 140px;
+		position: relative;
+		text-align: left;
+		vertical-align: top;
+		width: 404px;
+	}
+		#people [itemprop="creator"]::after {
+			bottom: -20px;
+			height: 20px;
+			left: 0;
+			position: absolute;
+			width: 404px;
+			content: "";
+			background:
+				-moz-radial-gradient(
+					50% 0%,
+					cover,
+					rgba(0, 0, 0, 0.15) 0%,
+					transparent 50%
+				) left top no-repeat;
+			background:
+				-ms-radial-gradient(
+					50% 0%,
+					cover,
+					rgba(0, 0, 0, 0.15) 0%,
+					transparent 50%
+				) left top no-repeat;
+			background:
+				-o-radial-gradient(
+					50% 0%,
+					cover,
+					rgba(0, 0, 0, 0.15) 0%,
+					transparent 50%
+				) left top no-repeat;
+			background:
+				-webkit-radial-gradient(
+					50% 0%,
+					cover,
+					rgba(0, 0, 0, 0.15) 0%,
+					transparent 50%
+				) left top no-repeat;
+			background:
+				radial-gradient(
+					50% 0%,
+					cover,
+					rgba(0, 0, 0, 0.15) 0%,
+					transparent 50%
+				) left top no-repeat;
+		}
+		#people [itemprop="creator"]:nth-of-type(even)::after {
+			background-image:
+				-moz-radial-gradient(
+					0% 0%,
+					cover,
+					rgba(0, 0, 0, 0.1) 10%,
+					transparent 40%
+				),
+				-moz-radial-gradient(
+					100% 0%,
+					cover,
+					rgba(0, 0, 0, 0.1) 10%,
+					transparent 40%
+				);
+			background-image:
+				-ms-radial-gradient(
+					0% 0%,
+					cover,
+					rgba(0, 0, 0, 0.1) 10%,
+					transparent 40%
+				),
+				-ms-radial-gradient(
+					100% 0%,
+					cover,
+					rgba(0, 0, 0, 0.1) 10%,
+					transparent 40%
+				);
+			background-image:
+				-o-radial-gradient(
+					0% 0%,
+					cover,
+					rgba(0, 0, 0, 0.1) 10%,
+					transparent 40%
+				),
+				-o-radial-gradient(
+					100% 0%,
+					cover,
+					rgba(0, 0, 0, 0.1) 10%,
+					transparent 40%
+				);
+			background-image:
+				-webkit-radial-gradient(
+					0% 0%,
+					cover,
+					rgba(0, 0, 0, 0.1) 10%,
+					transparent 40%
+				),
+				-webkit-radial-gradient(
+					100% 0%,
+					cover,
+					rgba(0, 0, 0, 0.1) 10%,
+					transparent 40%
+				);
+			background-image:
+				radial-gradient(
+					0% 0%,
+					cover,
+					rgba(0, 0, 0, 0.1) 10%,
+					transparent 40%
+				),
+				radial-gradient(
+					100% 0%,
+					cover,
+					rgba(0, 0, 0, 0.1) 10%,
+					transparent 40%
+				);
+			border-radius: 0 0 40px 40px / 20px;
+			left: 15px;
+			width: 374px;
+		}
+		#people [itemprop="creator"]:nth-of-type(even) {
+			height: 264px;
+			-moz-transform: rotate(5deg) translateY(10px) translateX(20px);
+			-ms-transform: rotate(5deg) translateY(10px) translateX(20px);
+			-o-transform: rotate(5deg) translateY(10px) translateX(20px);
+			-webkit-transform: rotate(5deg) translateY(10px) translateX(20px);
+			transform: rotate(5deg) translateY(10px) translateX(20px);
+		}
+		#people [itemprop="creator"] * {
+			font-family: Kreon;
+			line-height: 100%;
+			text-shadow: none;
+		}
+		#people [itemprop="name"] {
+			text-transform: uppercase;
+			font-size: 1em;
+			font-weight: 700;
+		}
+		#people [itemprop="jobTitle"] {
+		}
+		#people [itemprop="email"] {
+		}
+		#people [itemprop="description"] {
+			margin: 0.7em 0 0 0 !important;
+		}
+		#people [itemprop="creator"] > p {
+			font-size: 0.7em;
+			margin: 0.35em 0 0 0;
+		}
+		#people [itemprop="creator"] > p > a {
+			color: #1499d1;
+			text-decoration: none;
+		}
+		#people [itemprop="creator"] > p > a:active {
+			color: #dd0000;
+		}
+		#people [itemprop="creator"] > ul > li {
+			display: inline-block;
+			margin: 0.75em 0.1em 0 0;
+		}
+			#people [itemprop="url"] {
+				vertical-align: top;
+				display: inline-block;
+				height: 24px;
+				width: 24px;
+				background-repeat: no-repeat;
+				/* Malarkey Image Replacement */
+				letter-spacing: normal;
+				text-indent: -9999px;
+				overflow: hidden;
+			}
+			#people [itemprop="url"]:active {
+				margin-top: 2px;
+			}
+			#people .twitter {
+				background-image: url(images/icon_twitter.png);
+			}
+			#people .googleplus {
+				background-image: url(images/icon_google.png);
+			}
+		#people figure {
+			display: inline-block;
+			position: absolute;
+			top: 47px;
+			left: 15px;
+			-moz-transform: rotate(-2deg);
+			-ms-transform: rotate(-2deg);
+			-o-transform: rotate(-2deg);
+			-webkit-transform: rotate(-2deg);
+			transform: rotate(-2deg);
+		}
+			#people [itemprop="creator"]:nth-of-type(odd) > figure {
+				-moz-transform: rotate(2deg);
+				-ms-transform: rotate(2deg);
+				-o-transform: rotate(2deg);
+				-webkit-transform: rotate(2deg);
+				transform: rotate(2deg);
+			}
+			#people figure > p {
+				border: 6px solid white;
+				border-radius: 2px;
+				box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
+				height: 120px;
+				overflow: hidden;
+				width: 100px;
+			}
+			#people figure > p > img {
+				margin-left: -10px;
+			}
+			#people figure > figcaption {
+				background: url(images/staple.png) no-repeat;
+				height: 28px;
+				left: 83px;
+				position: absolute;
+				top: -14px;
+				width: 33px;
+				/* Malarkey Image Replacement */
+				letter-spacing: normal;
+				text-indent: -9999px;
+				overflow: hidden;
+			}
+			#people [itemprop="creator"]:nth-of-type(odd) > figure > figcaption {
+				left: 2px;
+				top: -8px;
+				-moz-transform: scale(-1, 1);
+				-ms-transform: scale(-1, 1);
+				-o-transform: scale(-1, 1);
+				-webkit-transform: scale(-1, 1);
+				transform: scale(-1, 1);
+			}

@@ -33,7 +33,7 @@
 }
 
 [hidden] {
-	display: none;
+	display: none !important;
 }
 
 html {
@@ -86,6 +86,17 @@ html {
 		-o-transition: all .1s ease-in-out;
 		-webkit-transition: background-color .1s ease-in-out;
 		transition: all .1s ease-in-out;
+	}
+	#menu > ul > li > a[rel="help"]::after {
+	/* #menu > ul > li > a:not(:local-link)::after { CSS4 FTW */
+		content: "\279a ";
+		display: inline-block;
+		opacity: 0.5;
+		-moz-transform: translateY(-1px);
+		-ms-transform: translateY(-1px);
+		-o-transform: translateY(-1px);
+		-webkit-transform: translateY(-1px);
+		transform: translateY(-1px);
 	}
 	#menu > ul > li > a:hover {
 		background-color: rgba(99, 48, 0, 0.6);
@@ -175,19 +186,26 @@ article {
 	padding: 3em 0 1em 0;
 	text-align: center;
 }
-	article > header > hgroup > h1 {
-		display: none;
-	}
-	article > header > hgroup > h2 {
+	article > header > hgroup {
 		margin: 0 0 0.5em 0;
-		color: #333;
-		font-family: Kreon;
-		font-size: 2em;
-		font-weight: 700;
-		text-shadow:
-			0 0 2px rgba(255, 255, 255, 1),
-			1px 1px 2px rgba(0, 0, 0, 0.25)
 	}
+		article > header > hgroup > h1 {
+			display: none;
+		}
+		article > header > hgroup > h2 {
+			color: #333;
+			display: inline-block;
+			font-family: Kreon;
+			font-size: 2em;
+			font-weight: 700;
+			text-shadow:
+				0 0 2px rgba(255, 255, 255, 1),
+				1px 1px 2px rgba(0, 0, 0, 0.25);
+		}
+		article:target > header > hgroup > h2 {
+			border-bottom: 1px dotted #333;
+			margin-bottom: -1px;
+		}
 	article > p,
 	article > ul {
 		color: #333;

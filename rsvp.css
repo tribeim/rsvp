@@ -496,6 +496,8 @@ article {
 	top: 170px;
 	visibility: hidden;
 	width: 160px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 	#sticky:hover {
 		-moz-transform: scale(1.05);
@@ -679,7 +681,6 @@ article {
 #address {
 	color: blue;
 	word-break: break-all;
-	/* Equivalent */
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 }
